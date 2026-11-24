@@ -1,78 +1,46 @@
+// All tracks are from Pixabay (https://pixabay.com/music/) under the Pixabay Content License.
+// Files live in /public/music and /public/covers so nothing depends on an outside host.
 import { v4 as uuidv4 } from "uuid";
-function chillHop() {
+
+function songs() {
   return [
     {
-      name: "Beaver Creek",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
-      artist: "Aso, Middle School, Aviino",
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=10075",
-      color: ["#205950", "#2ab3bf"],
+      name: "Slow Morning",
+      artist: "Marek Zielinski",
+      cover: "/covers/slow-morning.svg",
+      audio: "/music/slow-morning.mp3",
+      color: ["#F2A65A", "#7A4E9C"],
       id: uuidv4(),
       active: true,
     },
     {
-      name: "Daylight",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
-      artist: "Aiguille",
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=9272",
-      color: ["#EF8EA9", "#ab417f"],
+      name: "Rain on Glass",
+      artist: "Alex Morgan",
+      cover: "/covers/rain-on-glass.svg",
+      audio: "/music/rain-on-glass.mp3",
+      color: ["#4F7CAC", "#1E2F4F"],
       id: uuidv4(),
       active: false,
     },
     {
-      name: "Keep Going",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
-      artist: "Swørn",
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=9222",
-      color: ["#CD607D", "#c94043"],
+      name: "Late Table",
+      artist: "Alex Morgan",
+      cover: "/covers/late-table.svg",
+      audio: "/music/late-table.mp3",
+      color: ["#C9864A", "#5A2A27"],
       id: uuidv4(),
       active: false,
     },
     {
-      name: "Nightfall",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
-      artist: "Aiguille",
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=9148",
-      color: ["#EF8EA9", "#ab417f"],
+      name: "Night Signal",
+      artist: "Yevhen Astafiev",
+      cover: "/covers/night-signal.svg",
+      audio: "/music/night-signal.mp3",
+      color: ["#3BB2A0", "#14213D"],
       id: uuidv4(),
       active: false,
     },
-    {
-      name: "Reflection",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
-      artist: "Swørn",
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=9228",
-      color: ["#CD607D", "#c94043"],
-      id: uuidv4(),
-      active: false,
-    },
-    {
-      name: "Under the City Stars",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
-      artist: "Aso, Middle School, Aviino",
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=10074",
-      color: ["#205950", "#2ab3bf"],
-      id: uuidv4(),
-      active: false,
-    },
-    //ADD MORE HERE
-    {
-        name: "Focus",
-        artist: "Ezzy",
-        cover: "https://chillhop.com/wp-content/uploads/2020/10/0e5bb63f838ff92eeac142aae944e9f678df13c9-1024x1024.jpg",
-        id: uuidv4(),
-        active: false,
-        color: ["#3C3579", "#D8A2BA"],
-        audio: "https://mp3.chillhop.com/serve.php/?mp3=10335"
-    },
-    //ADD MORE HERE
   ];
 }
 
-export default chillHop;
+export default songs;

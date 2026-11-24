@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 //styles
 import './styles/app.scss';
 //components
@@ -31,11 +31,15 @@ function App() {
     const animation = Math.round((roundedCurrent / roundedDuration) * 100)
     setSongInfo({...songInfo, currentTime: current, duration: duration, animationPercentage: animation})
   }
-  const songEndHandler = async () => {
+  const songEndHandler = () => {
     let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
-    await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
-    if(isPlaying) audioRef.current.play();
+    setCurrentSong(songs[(currentIndex + 1) % songs.length]);
   }
+  // When the song changes while playing, start the new one once its src is set
+  useEffect(() => {
+    if (isPlaying) audioRef.current.play().catch(() => setIsPlaying(false));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentSong]);
 
   return (
     <div className={`App ${libraryStatus ? 'library-active' : ""}`}>

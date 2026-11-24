@@ -1,13 +1,14 @@
+@use "./song";
+@use "./player";
+@use "./library";
+@use "./nav";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-@import "./song";
-@import "./player";
-@import "./library";
-@import "./nav";
 
 h1,
 h2,
